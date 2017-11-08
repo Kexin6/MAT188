@@ -1,0 +1,18 @@
+xpts=[0,5,10,15,20];
+ypts=[200,152,118,93,74];
+plot(xpts, ypts, 'k*');
+hold on;
+coef=polyfit(xpts,ypts,4);
+x=linspace (0,50,500);
+p=[1.333333333333345e-04,-0.010666666666667,0.416666666666671,-11.433333333333376,2.000000000000001e+02];
+y=polyval (p,x);
+plot (x,y,'b');
+hold on;
+t=linspace (0,50,500);
+y=200*exp(-0.051*t);
+plot (t,y,'r');
+hold on;
+xlabel ('Time (min)');
+ylabel ('Penicillin Concentration (?g/ml)');
+title ('Penicillin Concentration Versus Time');
+legend ('Experimental data points','4th order polynomial fit','Exponential fit' );
