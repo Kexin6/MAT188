@@ -24,3 +24,7 @@ title ('2D Plots');
 legend ('g(x,-2)','g(x,0)','g(-1,y)');
 ylabel ('z');
 xlabel ('x or y');
+[a,b] = max(z);
+[a2,b2] = max(a)
+[c,d]=min (z);
+[c2,d2]=min(c)
