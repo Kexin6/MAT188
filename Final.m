@@ -1,3 +1,4 @@
+load('robpos.mat');
 close all;
 %Part a) position, velocity and acceleration graphs
 plot (robpos(:,2),robpos(:,end), 'r-');
@@ -19,7 +20,7 @@ t=linspace (0,60,60);
 plot (t,v,'b-');
 xlabel ('t');
 ylabel ('v(t)');
-title ('v(t) vs t')
+title ('v(t) vs t');
 legend ('Velocity of the robot');
 hold on;
 figure;
@@ -41,7 +42,7 @@ xfit=xxfit(1).*t.^4+xxfit(2).*t.^3+xxfit(3).*t.^2+xxfit(4).*t+xxfit(5);
 figure;
 plot (robpos(:,2),robpos(:,end), 'r-');
 hold on;
-plot (xfit, yfit, 'b.');
+plot (xfit, yfit, 'b-');
 xlabel ('x(t)');
 ylabel ('y(t)');
 title ('Position of Robot');
@@ -64,7 +65,7 @@ hold on;
 plot (t,vs,'m.');
 xlabel ('t');
 ylabel ('v(t)');
-title ('v(t) vs t')
+title ('v(t) vs t');
 legend ('Velocity (Original)','Velocity (Fit)');
 figure;
 plot (t,a,'m-');
@@ -102,7 +103,7 @@ t=linspace (0,60,60);
 plot (t,vc,'b--');
 xlabel ('t');
 ylabel ('v(t)');
-title ('v(t) vs t')
+title ('v(t) vs t');
 legend ('Velocity of the robot in circular path');
 hold on;
 figure;
@@ -111,4 +112,3 @@ xlabel ('t');
 ylabel ('a(t)');
 title ('a(t) vs t');
 legend ('Acceleration of the robot in circular path');
-hold on;
